@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicios Básicos de JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tarea: Ejercicios Básicos de JavaScript</h1>
+
+    <!-- Ejercicio 1: Cambiar contenido dinámicamente -->
+    <section>
+        <h2>1. Cambiar contenido dinámicamente</h2>
+        <p id="parrafoOriginal">Texto original</p>
+        <button onclick="cambiarTexto()">Cambiar texto</button>
+    </section>
+
+    <!-- Ejercicio 2: Agregar elementos a una lista -->
+    <section>
+        <h2>2. Agregar elementos a una lista</h2>
+        <input type="text" id="nuevoElemento" placeholder="Escribe algo...">
+        <button onclick="agregarElemento()">Agregar</button>
+        <ul id="listaDinamica"></ul>
+    </section>
+
+    <!-- Ejercicio 3: Mostrar/Ocultar contenido -->
+    <section>
+        <h2>3. Mostrar/Ocultar contenido</h2>
+        <div id="bloqueOcultable">Este es un bloque que se puede ocultar/mostrar.</div>
+        <button onclick="alternarVisibilidad()">Mostrar/Ocultar</button>
+    </section>
+
+    <!-- Ejercicio 4: Cambiar estilos con JavaScript -->
+    <section>
+        <h2>4. Cambiar estilos con JavaScript</h2>
+        <p id="parrafoColoreado">Hazme colorido</p>
+        <button onclick="cambiarColor()">Cambiar color</button>
+    </section>
+
+    <!-- Ejercicio 5: Contador de clics -->
+    <section>
+        <h2>5. Contador de clics</h2>
+        <button id="botonClics" onclick="contarClics()">Haz clic</button>
+        <p id="contador">Clics: 0</p>
+    </section>
+
+    <!-- Ejercicio 6: Formulario básico con validación -->
+    <section>
+        <h2>6. Formulario básico con validación</h2>
+        <form id="formulario">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <button type="button" onclick="validarFormulario()">Enviar</button>
+        </form>
+        <p id="mensajeFormulario"></p>
+    </section>
+
+    <!-- Enlace al script externo -->
+    <script src="script.js"></script>
+</body>
+</html>
