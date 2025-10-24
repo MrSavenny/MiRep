@@ -1,0 +1,167 @@
+/* estilos: ejercicio2.css - comentarios limpios */
+
+/* Fuentes y fondo del body */
+h1, h2, h3, nav, footer, .act {
+    font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+
+body {
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    font-size: 100%;
+    background-color: whitesmoke;
+    background-image: url(../images/background-pattern.png);
+}
+
+/* Encabezados y párrafos */
+h1 {
+    padding-left: 6em;
+}
+
+h2 {
+    font-size: 1.125rem;
+}
+
+h3 {
+    font-size: 1.125em;
+    border-bottom: solid 1pt #999999;
+    margin-top: 0em;
+    margin-right: 0em;
+    margin-bottom: 0.5em;
+    margin-left: 0em;
+}
+
+p {
+    font-size: 1em;
+}
+
+/* Estilos de enlaces */
+a:visited {
+    color: #BB78BB;
+}
+
+a:link {
+    font-weight: bold;
+    color: #47B3F7;
+}
+
+a[href^="mailto"] {
+    background: url(../images/email.png) no-repeat 0 3px;
+    padding-left: 1em;
+}
+
+a[href^="tel"] {
+    background: url(../images/call.png) no-repeat 0 3px;
+    padding-left: 1em;
+}
+
+/* Header */
+header {
+    background-image: url(../images/header-background.png);
+    background-repeat: repeat;
+}
+
+/* Navegación */
+nav#firstMenu {
+    background-color: #283649;
+    font-size: 0.85em;
+    text-align: right;
+    padding-right: 6em;
+}
+
+nav#secondaryMenu {
+    background-color: #DAE1E8;
+    font-size: 1em;
+    padding-left: 6em;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+}
+
+nav {
+    padding: 0.50em;
+}
+
+nav a {
+    padding: 0.25em;
+}
+
+/* Article (contenedor principal) */
+article>div {
+    background-color: white;
+    text-align: center;
+    margin: 1.5em 6em 1.5em 6em;
+}
+
+article>div img {
+    border: solid 1.5px #999999;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
+/* Section (bloques de contenido) */
+section {
+    background-color: white;
+    margin: 1em 6em 1em 6em;
+    border: solid 1pt black;
+}
+
+section h3 {
+    color: mintcream;
+    padding: 0.5em;
+    background-image: url(../images/header-background.png);
+    background-repeat: repeat;
+}
+
+section p {
+    margin-left: 0.5em;
+}
+
+section em {
+    color: #828275;
+}
+
+/* Clase .act (botones / acciones) */
+div.act ul li {
+    list-style: none;
+    display: inline;
+}
+
+div.act {
+    background-color: #283649;
+    font-size: 0.75em;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
+div.act a {
+    background-color: #DAE1E8;
+    padding: 0.1em 1em 0.1em 2em;
+    border: solid 1px #999999;
+    border-radius: 4px;
+    margin-right: 0.5em;
+}
+
+/* Iconos: Edit y Flag */
+.Edit {
+    background: url(../images/edit.png) no-repeat;
+    background-position: 0.250em 0.150em;
+}
+
+.Flag {
+    background: url(../images/flag.png) no-repeat;
+    background-position: 0.250em 0.150em;
+}
+
+/* Footer */
+footer {
+    background-color: #283649; /* Nota: Esto es un typo del PDF, probablemente era #283649 */
+    margin: 1em 6em 1em 6em;
+    padding: 0.5em;
+}
+
+footer p {
+    color: mintcream;
+    font-size: 0.875em;
+}
