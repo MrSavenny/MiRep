@@ -138,7 +138,7 @@ aside {
     padding-bottom: 0.5rem;
 }
 
-/* --- INFO FLOTANTE (Requerimiento PDF: "Ambos flotantes") --- */
+/* --- INFO FLOTANTE --- */
 .info-container {
     margin-bottom: 1.5rem;
 }
@@ -221,7 +221,7 @@ table th {
     padding-bottom: 5px;
 }
 
-/* LISTAS CON FLOTANTES (Requerimiento PDF: "Flotantes dentro de la lista") */
+/* LISTAS CON FLOTANTES */
 .media-list {
     list-style: none;
 }
@@ -272,7 +272,6 @@ table th {
 }
 
 /* --- RESPONSIVE --- */
-/* (Requerimiento PDF: "la imagen cambia de tamaño... objetos flotantes se posicionan correctamente") */
 @media (max-width: 768px) {
     #box {
         flex-direction: column;
@@ -297,4 +296,5 @@ table th {
     header nav ul {
         margin-top: 10px;
     }
+
 }
