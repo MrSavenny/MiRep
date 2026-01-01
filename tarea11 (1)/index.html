@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM - Tarea 11</title>
+  <link rel="stylesheet" href="styles/reset.css" /> <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <a class="logo" href="#">No es un CRM real</a>
+      <nav>
+        <ul>
+          <li><a href="#">Tablero</a></li>
+          <li><a href="#">Contactos</a></li>
+          <li><a href="#">Tareas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    
+  <div id="box">
+    
+    <div id="railLeft">
+      <div class="user-profile">
+        <div class="user-info">
+            <span class="icon-user"></span> <strong>Juan López</strong>
+            <br/> Representante de Ventas
+            <br/> Región Centro-Sur
+        </div>
+        <div class="user-actions">
+            <a href="#">Configuración</a> | <a href="#">Salir</a>
+        </div>
+      </div>
+
+      <nav class="vertical-nav">
+        <ul>
+          <li><a href="#">Contactos</a></li>
+          <li><a href="#">Tareas</a></li>
+          <li><a href="#">Órdenes</a></li>
+          <li><a href="#">Calendario</a></li>
+        </ul>
+      </nav>
+        
+      <div class="widget">
+        <h3>Mensajes Recientes</h3>
+        <ul id="recentMessageList" class="media-list">
+          <li>
+            <img src="image/icon.png" class="blockIcon">
+            <div class="media-body">
+                <p>De <a href="#">Ellie Sullivan</a><br/><span class="date">4 Octubre, 2014</span></p>
+            </div>
+          </li>
+          <li>
+            <img src="image/icon.png" class="blockIcon">
+            <div class="media-body">
+                <p>De <a href="#">Madalena Sampaio</a><br/><span class="date">4 Octubre, 2014</span></p>
+            </div>
+          </li>
+          <li>
+            <img src="image/icon.png" class="blockIcon">
+            <div class="media-body">
+                <p>De <a href="#">Puja Srivastava</a><br/><span class="date">3 Octubre, 2014</span></p>
+            </div>
+          </li>
+          <li>
+            <img src="image/icon.png" class="blockIcon">
+            <div class="media-body">
+                <p>De <a href="#">Mark Taylor</a><br/><span class="date">2 Octubre, 2014</span></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="middle">
+      <div class="breadcrumb">
+        <a href="#">Tablero</a> / <a href="#">Ventas</a>
+      </div>
+        
+      <h2 class="page-title">Factura</h2>
+      
+      <div class="info-container clearfix">
+          <div id="company">
+            <h4>Pearson Ed Canada</h4> 
+            26 Prince Andrew Place<br/> 
+            Don Mills, Ontario M3C 2T8<br/> 
+            416-447-5101<br/> 
+            1-800-263-9965
+          </div>
+            
+          <div id="clientInfo">
+            <h4>Martha Sánchez</h4> 
+            19A Avenida Instituto Politécnico<br/> 
+            90070 Tlaxcala, México<br/> 
+            +52 (246) 450-0450
+          </div>
+      </div>
+        
+      <hr>
+      
+      <div class="table-responsive">
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th scope="col">Título</th>
+                <th scope="col">Autor</th>
+                <th scope="col">ISBN</th>
+                <th scope="col">Año</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="image/photo1.jpg" height="100px" /></td>
+                <td><em>El Mito de la Inteligencia Artificial...</em></td>
+                <td>Erick Larson</td>
+                <td>0321837347</td>
+                <td>2021</td>
+            </tr>
+            <tr>
+                <td><img src="image/photo2.jpg" height="100px"/></td>
+                <td><em>El patrón bitcoin</em></td>
+                <td>Gary Rockswold</td>
+                <td>0321826132</td>
+                <td>2014</td>
+            </tr>
+            <tr>
+                <td><img src="image/photo3.jpg" height="100px"/></td>
+                <td><em>The subtle art of not giving a fuck</em></td>
+                <td>Mark Manson</td>
+                <td>0321826124</td>
+                <td>2014</td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+      
+      <p><a href="#" class="SendButton">Enviar a un cliente</a></p>
+    </div>
+
+    <aside>
+      <div class="widget">
+        <h3>Cambios semanales</h3>
+        <ul id="chList">
+          <li>
+            <span class="chNumber">20</span>
+            <p>Nuevas Ordenes</p>
+          </li>
+          <li>
+            <span class="chNumber">5</span>
+            <p>Nuevos Libros</p>
+          </li>
+          <li>
+            <span class="chNumber">6</span>
+            <p>Nuevos Clientes</p>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="widget">
+        <h3>Mejores vendedores</h3>
+        <ul id="sellList" class="media-list">
+          <li>
+            <img src="image/photo4.jpg" height="80px" class="boxBook" />
+            <p class="bookTitle"><em><a href="#">English for Careers</a></em></p>
+          </li>
+          <li>
+            <img src="image/photo5.jpg" height="80px" class="boxBook" />
+            <p class="bookTitle"><em><a href="#">Adaptive Filter Theory</a></em></p>
+          </li>
+          <li>
+            <img src="image/photo6.jpg" height="80px" class="boxBook" />
+            <p class="bookTitle"><em><a href="#">Data Structures and Algorithm Analysis</a></em></p>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</body>
+</html>
