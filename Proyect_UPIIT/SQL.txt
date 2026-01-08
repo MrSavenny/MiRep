@@ -1,0 +1,56 @@
+Vaya a la pestaña SQL en phpMyAdmin y lo pegue. Esto creará la base de datos y todas las tablas con la columna fecha_siembra y las relaciones correctas.
+
+
+-- Estructura de la Base de Datos
+CREATE DATABASE IF NOT EXISTS proyecto_acuicola;
+USE proyecto_acuicola;
+
+-- 1. Gestión de Usuarios y Seguridad
+CREATE TABLE usuarios (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 2. Gestión de Estanques y Bitácora de Salud
+CREATE TABLE estanques (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nombre_estanque VARCHAR(100) NOT NULL,
+  cantidad_peces INT NOT NULL,
+  capacidad_litros INT NOT NULL,
+  fecha_siembra DATE NOT NULL,
+  observaciones_salud TEXT, -- Registro acumulativo de síntomas y bajas
+  usuario_id INT,
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+-- 3. Monitoreo de Parámetros Fisicoquímicos
+CREATE TABLE monitoreo (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  estanque_id INT NOT NULL,
+  ph_nivel DECIMAL(4,2) NOT NULL,
+  temperatura DECIMAL(4,2) NOT NULL,
+  fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (estanque_id) REFERENCES estanques(id) ON DELETE CASCADE
+);
+
+-- 4. Registro de Temperatura Ambiental (Comparativo)
+CREATE TABLE historial_clima (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  temp_ambiente DECIMAL(4,2) NOT NULL,
+  fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 5. TABLA: inventario_alimento
+CREATE TABLE IF NOT EXISTS `inventario_alimento` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `cantidad_total_kg` DECIMAL(10,2) DEFAULT 0.00,
+  `alerta_minima_kg` DECIMAL(10,2) DEFAULT 10.00,
+  `ultima_actualizacion` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- REGISTRO INICIAL DE BODEGA (Opcional)
+-- ------------------------------------------------------------
+INSERT INTO `inventario_alimento` (`cantidad_total_kg`, `alerta_minima_kg`) VALUES (50.00, 10.00);
